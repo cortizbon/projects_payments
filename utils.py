@@ -1,5 +1,7 @@
 import boto3
 import pandas as pd
+import streamlit as st
+
 def client(var_name):
     s3 = boto3.client('s3', 
                         region_name='us-east-1', 
