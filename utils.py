@@ -10,8 +10,6 @@ def client(var_name):
 
     bucket_name = 'bucket-csv-files'
 
-    response = s3.list_objects_v2(Bucket=bucket_name)
-
     s3.download_file(Bucket=bucket_name,
             Key=f"pay_info/{var_name}/grouped.csv",
             Filename=f"{var_name}_grouped.csv")
