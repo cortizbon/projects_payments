@@ -26,4 +26,8 @@ try:
                         csv2,
                         f"{var_name}_grouped.csv")
 except ClientError:
-    st.warning("Either your nickname is not correct or you have not written any name.")
+    st.warning("Your name is not correct.")
+
+except NameError:
+    st.warning("Write your name.")
+    
