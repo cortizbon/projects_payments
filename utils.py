@@ -24,6 +24,6 @@ def client(var_name):
 def return_df(var_name):
     df1 = pd.read_csv(f"{var_name}_projects.csv")
     df2 = pd.read_csv(f"{var_name}_grouped.csv")
-    csv1 = df1.to_csv(df1, index=False).enconde('utf-8')
-    csv2 = df2.to_csv(df1, index=False).enconde('utf-8') 
+    csv1 = df1.to_csv(index=False).enconde('utf-8')
+    csv2 = df2.to_csv(index=False).enconde('utf-8') 
     return csv1, csv2
