@@ -14,20 +14,25 @@ if not var_name:
   st.warning('Write your nickname.')
   st.stop()
 
-client(var_name)
-csv1, csv2 = return_df(var_name)
+try:
 
-col1, col2 = st.columns(2)
+    client(var_name)
+    csv1, csv2 = return_df(var_name)
 
-with col1:
-    st.download_button("Download detailed projects info here.",
-                        csv1,
-                        f"{var_name}_projects.csv")
+    col1, col2 = st.columns(2)
 
-with col2:
-    st.download_button("Download grouped info here.",
-                        csv2,
-                        f"{var_name}_grouped.csv")
+    with col1:
+        st.download_button("Download detailed projects info here.",
+                            csv1,
+                            f"{var_name}_projects.csv")
+
+    with col2:
+        st.download_button("Download grouped info here.",
+                            csv2,
+                            f"{var_name}_grouped.csv")
+        
+except:
+    st.error("Your name is not correct. Try again.")
 
 
 
