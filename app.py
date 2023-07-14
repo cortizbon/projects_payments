@@ -25,9 +25,7 @@ try:
         st.download_button("Download grouped info here.",
                         csv2,
                         f"{var_name}_grouped.csv")
-except ClientError:
+except:
     st.warning("Your name is not correct.")
 
-except NameError:
-    st.warning("Write your name.")
     
