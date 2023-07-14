@@ -9,7 +9,9 @@ st.write("Write the nickname in your email. If your mail is pepo90@lmail.com, wr
 var_name = st.text_input("Write the nickname in your email. If your mail is pepo90@lmail.com, write 'pepo90', no spaces.")
 
 s3 = boto3.client('s3', 
-                  region_name='us-east-1')
+                  region_name='us-east-1', 
+                  aws_access_key_id=st.secrets['one'], 
+                  aws_secret_access_key=st.secrets['two'])
 
 bucket_name = 'bucket-csv-files'
 
