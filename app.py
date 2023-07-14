@@ -14,7 +14,7 @@ if not var_name:
   st.warning('Write your nickname.')
   st.stop()
 
-if st.button("Try:"):
+if st.button("Process"):
     try:
 
         client(var_name)
